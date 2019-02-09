@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-#
 # -------------------------------------------------------------------------------
-# Name:         cameo
+# Name:         cameo.py
 # Description:  This is a demo of opencv.
 # Author:       superman
 # Date:         2019/2/6

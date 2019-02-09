@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-#
 # -------------------------------------------------------------------------------
-# Name:         managers
+# Name:         managers.py
 # Description:
 # Author:       superman
 # Date:         2019/2/2
@@ -129,17 +129,21 @@ class WindowManager(object):
     @property
     def isWindowCreated(self):
         return self._isWindowCreated
+
     # 创建窗口
     def createWindow(self):
         cv2.namedWindow(self._windowName)
         self._isWindowCreated = True
+
     # 显示窗口函数
     def show(self, frame):
         cv2.imshow(self._windowName, frame)
+
     # 销毁窗口函数
     def destroyWindow(self):
         cv2.destroyWindow(self._windowName)
         self._isWindowCreated = False
+
     # 按键事件处理函数
     def processEvents(self):
         keycode = cv2.waitKey(1)
