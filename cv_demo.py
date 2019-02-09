@@ -1,6 +1,7 @@
 import cv2
 
 
+## 转换视频格式
 def avi_trans(input, output='output.avi', mode='MPEG-4'):
     videoCapture = cv2.VideoCapture(input)
     fps = videoCapture.get(cv2.CAP_PROP_FPS)
