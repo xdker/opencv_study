@@ -1,6 +1,4 @@
-import tensorflow as tf
 import cv2
-import numpy as np
 
 
 def avi_trans(input, output='output.avi', mode='MPEG-4'):
