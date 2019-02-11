@@ -72,7 +72,7 @@ def recolorCMV(src, dst):
 
 def blend(foregroundSrc, backgroundSrc, dst, alphaMask):
     # Calculate the normalized alpha mask.
-    maxAlpha = np.iinfo(alphaMask.dtype).max
+    maxAlpha = np.iinfo(alphaMask.dtype).max # 取最大值
     normalizedAlphaMask = (1.0 / maxAlpha) * alphaMask
 
     # Calculate the normalized inverse alpha mask.
