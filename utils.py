@@ -12,7 +12,7 @@ import scipy.interpolate
 
 
 def createFlatView(array):
-    """Return a 1D view of an array of any dimensionality."""
+    """Return a 1D view of an array of any dimensionality.将三个信道的图像数，变成一维数组。"""
     flatView = array.view()
     flatView.shape = array.size
     return flatView
@@ -22,7 +22,7 @@ def createLookupArray(func, length=256):
     """Return a lookup for whole-number inputs to a function.
 
     The lookup values are clamped to [0, length - 1].
-
+    返回函数的所有函数值[0,255]。
     """
     if func is None:
         return None
@@ -36,7 +36,7 @@ def createLookupArray(func, length=256):
 
 
 def applyLookupArray(lookupArray, src, dst):
-    """Map a source to a destination using a lookup."""
+    """Map a source to a destination using a lookup.使用lookup函数映射原始图像。"""
     if lookupArray is None:
         return
     dst[:] = lookupArray[src]
