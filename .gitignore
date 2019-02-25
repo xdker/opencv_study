@@ -130,4 +130,4 @@ $RECYCLE.BIN/
 *.lnk
 
 .gitignore
-.idea/workspace.xml
+.idea/
