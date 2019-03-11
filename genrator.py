@@ -21,9 +21,8 @@ def genrate():
         for (x, y, w, h) in faces:
             img = cv2.rectangle(frame, (x, y), (x + w, y + h), (255, 0, 0), 2)
             f = cv2.resize(gray[y:y + h, x:x + w], (200, 200))
-            cv2.imshow("sss", f)
-            print(cv2.imwrite("./date/at/zlp/{}.jpg".format(conut), f))
-            print(cv2.imwrite("./date/at/zlp/qqq.png", frame))
+            cv2.imshow("face", f)
+            print(cv2.imwrite("./data/at/zlp/{}.jpg".format(conut), f))
             conut += 1
             print(conut)
         cv2.imshow("camera", frame)
